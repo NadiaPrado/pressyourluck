@@ -1,0 +1,127 @@
+
+* {
+    /*margin: 0;*/
+    /*padding: 0;*/
+   /* border: 0;*/
+    background-color: orangered;
+
+}
+
+#tablero{
+    width: 500px;
+    height: 300px;
+    background-color: red;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "imagen1 imagen2 imagen3 imagen4 imagen5 imagen6"
+                        "imagen7 title title title title imagen8"
+                        "imagen9 title title title title imagen10"
+                        "imagen11 title title title title imagen12"
+                        "imagen13 imagen14 imagen15 imagen16 imagen17 imagen18";
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: blue;
+}
+
+#tablero > *:nth-child(1){
+    grid-area: title;
+}
+
+#tablero > *:nth-child(2){
+    grid-area: imagen1;
+}
+
+#tablero > *:nth-child(3){
+    grid-area: imagen2;
+}
+
+#tablero > *:nth-child(4){
+    grid-area: imagen3;
+}
+
+#tablero > *:nth-child(5){
+    grid-area: imagen6;
+}
+
+#tablero > *:nth-child(6){
+    grid-area: imagen7;
+}
+
+#tablero > *:nth-child(7){
+    grid-area: imagen8;
+}
+
+#tablero > *:nth-child(8){
+    grid-area: imagen4;
+}
+
+#tablero > *:nth-child(9){
+    grid-area: imagen5;
+}
+
+#tablero > *:nth-child(10){
+    grid-area: imagen9;
+}
+
+#tablero > *:nth-child(11){
+    grid-area: imagen10;
+}
+
+#tablero > *:nth-child(12){
+    grid-area: imagen11;
+}
+
+#tablero > *:nth-child(13){
+    grid-area: imagen12;
+}
+
+#tablero > *:nth-child(14){
+    grid-area: imagen13;
+}
+
+#tablero > *:nth-child(15){
+    grid-area: imagen14;
+}
+
+#tablero > *:nth-child(16){
+    grid-area: imagen15;
+}
+
+#tablero > *:nth-child(17){
+    grid-area: imagen16;
+}
+
+#tablero > *:nth-child(18){
+    grid-area: imagen17;
+}
+
+#tablero > *:nth-child(19){
+    grid-area: imagen18;
+}
+
+/*tablet*/
+@media screen and (max-width: 768px){
+    .image {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background-color: green;
+    }
+    
+}
+
+/*mobile*/
+@media screen and (max-width: 425px){
+    .image {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        background-color: yellow;
+    }
+
+}
