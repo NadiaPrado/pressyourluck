@@ -1,0 +1,97 @@
+#ejemplo{
+    color: red;
+    border: 1px dashed pink;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+
+#gradual {
+    background-color: purple;
+    width: 600px;
+    height:400px;
+    animation-name: crecer;
+    animation-duration: 10s;
+}
+
+#gradual:hover {
+    animation-name: sobre;
+    animation-duartion: 3s;
+    animation-interation-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes example{
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+
+@keyframes sobre{
+    from{background-color: orange;}
+    to{background-color: orangered;}
+}
+
+
+
+
+@keyframes crecer {
+    /*from{
+        width: 0px;
+    }
+    to{
+        width: 600px;
+    }*/
+    0%{
+        width: 0;
+    }
+    25%{
+        width: 200px;
+        background-color:palevioletred ;
+    }
+    50%{
+        width: 400px;
+    }
+    75%{
+        width: 500px;
+        background-color: blue;
+    }
+    100%{
+        width: 600px;
+    }
+}
+
+.contenedor_img{
+    width: 0;
+    
+}
+
+.contenedor_img > img {
+width: 100%;
+height: 100%;
+}
+
+#control_img{
+    margin: 8px;
+    display: block;
+}
+
+#control_img:hover {
+    cursor: pointer;
+    & ~ .contenedor_img{
+    animation-name: verimagen;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    }
+}
+
+@keyframes verimagen{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
